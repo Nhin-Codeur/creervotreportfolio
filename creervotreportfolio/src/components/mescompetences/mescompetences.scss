@@ -1,0 +1,83 @@
+.mescompetences {
+
+    display: flex;
+    flex-direction: row;
+    width: 1170px;
+    margin: 30px auto;
+
+    .front {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 33%;
+
+        img {
+            height: 100px;
+            width: 70px;
+        }
+
+        span {
+            font-size: 13px;
+            color: gray;
+            text-align: center;
+            width: 70%;
+        }
+    }
+
+    .back {
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            height: 100px;
+            width: 204px;
+
+        }
+
+        span {
+            font-size: 13px;
+            color: gray;
+            text-align: center;
+            width: 70%;
+        }
+    }
+
+    .outils {
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            height: 100px;
+            width: 70px;
+        }
+
+        span {
+            font-size: 13px;
+            color: gray;
+            text-align: center;
+            width: 70%;
+        }
+    }
+
+
+}
+
+@media (max-width: 1200px) {
+    .mescompetences {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .back {
+        margin-bottom: 30px;
+    }
+
+    .front {
+        margin-bottom: 30px;
+    }
+}
