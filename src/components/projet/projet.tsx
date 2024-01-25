@@ -1,6 +1,19 @@
 import './projet.scss';
 
-export default function Projet({ titre = '', description = '', color = 'grey', missions, moyens, lien, nomLien }) {
+interface propsProjets {
+    titre: string;
+    description: string;
+    color: string;
+    missions: Array<string>;
+    moyens: Array<string>;
+    lien: string;
+    nomLien: string;
+}
+
+export default function Projet({ titre, description, color, missions, moyens, lien, nomLien }: propsProjets) {
+
+
+    var test: Array<string>;
 
     return (
         <>

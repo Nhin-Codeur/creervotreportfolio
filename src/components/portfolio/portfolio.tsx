@@ -10,14 +10,15 @@ export default function Portfolio() {
                 <h1> Portfolio </h1>
             </div>
             <div className='projets'>
-                <Projet
+
+                {/* <Projet
                     titre="créer un site en HTML et CSS"
                     description="Créez la page d'accueil d'une agence de voyage avec HTML & CSS"
                     color='#A9CEF4'
                     missions={['Mettre en place un environnement de développement', 'Implémenter le code HTML', 'Mettre en place le responsive design']}
                     moyens={['HTML5/CSS']}
                     lien='https://github.com/Nhin-Codeur/Booki'
-                    nomLien={'Booki'} />
+                    nomLien={'Booki'} /> */}
                 <Projet
                     titre='Créez une page web dynamique avec JavaScript'
                     description="coder le front-end d'un site à partir d'un back-end"
