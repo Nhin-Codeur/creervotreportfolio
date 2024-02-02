@@ -17,7 +17,7 @@ function smtpRequest(body: any) {
 
     let apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
     let apiKey = apiInstance.authentications['apiKey'];
-    apiKey.apiKey = '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';
+    apiKey.apiKey = process.env.APITOKENBREVO;
     let sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
 
 
