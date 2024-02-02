@@ -7,7 +7,7 @@ export default function Contacts() {
             <div className='contact'>
                 <h1>Me contacter</h1>
                 <div>
-                    <img src='/assets/mobile.svg'></img>
+                    <img src='/assets/mobile.svg' />
                     <span> +33 6 ** ** ** **</span>
                 </div>
                 <div>

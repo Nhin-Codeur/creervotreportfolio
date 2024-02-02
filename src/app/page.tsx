@@ -7,6 +7,7 @@ import MesCompetences from '../components/mescompetences/mescompetences'
 import Portfolio from '../components/portfolio/portfolio'
 import Contacts from '../components/contact/contact'
 import Footer from '../components/footer/footer'
+import ModaleMail from '@/components/modaleMail/modaleMail'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Apropos></Apropos>
       <Contacts></Contacts>
       <Footer></Footer>
+
     </>
 
   )

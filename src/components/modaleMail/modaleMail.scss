@@ -1,0 +1,109 @@
+.modaleContainer {
+
+
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    z-index: 1;
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+
+}
+
+.modale {
+
+    height: 400px;
+    width: 600px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #303e42;
+    opacity: 100%;
+    flex-direction: column;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    color: white;
+
+    .top-modale {
+        justify-content: center;
+        display: flex;
+
+        span {
+
+            font-weight: bold;
+        }
+
+        .close-modale-wrap {
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            height: 27px;
+
+            img {
+                height: 27px;
+            }
+        }
+
+        .close-modale-wrap:hover {
+            background-color: #9999993d;
+            border-radius: 0.4rem;
+            cursor: pointer;
+        }
+
+
+    }
+
+
+
+    .email-user {
+        width: 30%;
+        background-color: #36494E;
+        border: 1px solid white;
+        border-radius: 8px;
+        padding: 5px;
+        color: white;
+    }
+
+
+    .mail-content {
+
+        width: 90%;
+        height: 200px;
+        background-color: #36494E;
+        border-radius: 8px;
+        padding: 5px;
+        color: white;
+    }
+
+    button {
+        color: white;
+        width: 30%;
+        padding: 10px 0px;
+        background-color: #303e42;
+        border: 1px solid white;
+        border-radius: 19px;
+
+    }
+
+    button:disabled {
+        background-color: gray;
+        cursor: none;
+    }
+
+    button:hover:enabled {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+    }
+
+
+}

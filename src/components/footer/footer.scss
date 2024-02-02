@@ -12,8 +12,12 @@
     }
 
     img {
-
+        height: 38px;
         margin-right: 10px;
+    }
+
+    img:hover {
+        cursor: pointer;
     }
 
     a {
@@ -31,4 +35,10 @@
     .linkedin {
         background-image: url('../../../public/assets/linkedin.png');
     }
+
+
+}
+
+.modale-footer {
+    transition: visibility 0s, opacity 0.5s linear;
 }
