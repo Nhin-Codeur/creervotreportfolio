@@ -34,7 +34,7 @@ function smtpRequest(body: any) {
 
 
     apiInstance.sendTransacEmail(sendSmtpEmail).then(function (data: any) {
-        console.log('API called successfully. Returned data: ' + JSON.stringify(data));
+        console.error('API called successfully. Returned data: ' + JSON.stringify(data));
     }, function (error: any) {
         console.error(error);
     });
