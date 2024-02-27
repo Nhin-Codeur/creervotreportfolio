@@ -19,7 +19,7 @@ export default function Footer() {
             <div className='footer'>
                 <img src='/assets/mail.svg' onClick={() => setIsModaleOpen(true)} />
                 <a className='github' href='https://github.com/Nhin-Codeur'></a>
-                <a className='linkedin' href='https://linkedin.com'></a>
+                <a className='linkedin' href='https://www.linkedin.com/in/elliot-clemenceau-66981b254/'></a>
             </div>
             <div className='modale-footer' style={{ visibility: isModaleOpen ? 'visible' : 'hidden', opacity: isModaleOpen ? '100' : '0' }}>
                 <ModaleMail closeModale={() => setIsModaleOpen(false)} ></ModaleMail>

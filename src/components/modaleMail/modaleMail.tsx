@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './modaleMail.scss';
 
 function SendEmail(emailUser: string, message: string, setIsMailLoading: Function, closeModale: Function) {
@@ -27,11 +27,20 @@ export default function ModaleMail({ closeModale }: ModaleProps) {
 
 
 
-
-
+    const [isInputMailValid, setIsInputMailValid] = useState(true);
     const [emailUser, setEmailUser] = useState('');
     const [message, setMessage] = useState('');
     const [isMailLoading, setIsMailLoading] = useState(false);
+
+    useEffect(() => {
+        var pattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+        if (!emailUser.match(pattern)) {
+            setIsInputMailValid(false);
+        } else {
+            setIsInputMailValid(true);
+        }
+
+    }, [emailUser])
 
     return (
         <>
@@ -49,6 +58,7 @@ export default function ModaleMail({ closeModale }: ModaleProps) {
                         onChange={e => setEmailUser(e.target.value)} // // ...et met à jour la variable d'état à chaque frappe !
                         placeholder='Votre email...'
                     />
+                    <span style={{ color: 'red', display: isInputMailValid ? 'none' : 'block' }}> email invalide </span>
                     <textarea
                         className='mail-content'
                         value={message} // ...force la valeur du champ de saisie à la valeur de la variable d'état...
@@ -57,7 +67,7 @@ export default function ModaleMail({ closeModale }: ModaleProps) {
                     />
                     <button
                         onClick={() => SendEmail(emailUser, message, setIsMailLoading, closeModale)}
-                        disabled={isMailLoading ? true : false}
+                        disabled={isMailLoading || !isInputMailValid ? true : false}
                     > Envoyer</button>
                 </div>
             </div>

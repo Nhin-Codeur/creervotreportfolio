@@ -1,5 +1,6 @@
+'use client'
 import './projet.scss';
-
+import { useInView } from "react-intersection-observer";
 interface propsProjets {
     titre: string;
     description: string;
@@ -10,14 +11,20 @@ interface propsProjets {
     nomLien: string;
 }
 
+
+
 export default function Projet({ titre, description, color, missions, moyens, lien, nomLien }: propsProjets) {
 
 
-    var test: Array<string>;
+
+    const { ref, inView, entry } = useInView({
+        /* Optional options */
+        threshold: 0,
+    });
 
     return (
         <>
-            <div className='projet ' style={{ backgroundColor: color }}>
+            <div ref={ref} className='projet ' style={{ backgroundColor: color, opacity: inView ? 100 : 0, transform: inView ? 'translateY(0)' : 'translateX(-20%)' }}>
                 <h2> {titre}</h2>
                 <span> {description} </span>
                 <h3> Missions </h3>

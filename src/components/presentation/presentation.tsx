@@ -3,7 +3,7 @@ import './presentation.scss';
 export default function Presentation() {
     return (
         <>
-            <div className='presentation-container'>
+            <div className='presentation-container' id='presentation'>
                 <h1>
                     Elliot Clemenceau
                 </h1>
