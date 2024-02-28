@@ -10,7 +10,7 @@ export default function Apropos() {
                 <div className='text-container'>
 
                     <h2> A propos de moi </h2>
-                    <span> Je suis passionné par le développement front-end et le web design, vous cherchez un développeur passionné et polyvalent pour votre prochain projet ? N'hésitez pas à me contacter pour discuter de vos besoins.</span>
+                    <span> Diplômé de la formation développeur web OpenClassrooms RNCP+5 équivalent bac +2 en alternance, <br /> Je suis passionné par le développement front-end et le web design, vous cherchez un développeur passionné et polyvalent pour votre prochain projet ? N'hésitez pas à me contacter pour discuter de vos besoins.</span>
                 </div>
                 <div className='right'> </div>
             </div>

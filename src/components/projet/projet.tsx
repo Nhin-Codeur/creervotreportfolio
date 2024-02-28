@@ -6,6 +6,7 @@ interface propsProjets {
     description: string;
     color: string;
     missions: Array<string>;
+    problemes: string;
     moyens: Array<string>;
     lien: string;
     nomLien: string;
@@ -13,7 +14,7 @@ interface propsProjets {
 
 
 
-export default function Projet({ titre, description, color, missions, moyens, lien, nomLien }: propsProjets) {
+export default function Projet({ titre, description, color, missions, problemes, moyens, lien, nomLien }: propsProjets) {
 
 
 
@@ -31,6 +32,8 @@ export default function Projet({ titre, description, color, missions, moyens, li
                 {
                     missions && missions.map(mission => <span>{mission}</span>)
                 }
+                <h3> problèmes résolus </h3>
+                <span> {problemes} </span>
                 <h3> Moyens utilisés :</h3>
                 {
                     moyens && moyens.map(moyen => <span>{moyen}</span>)

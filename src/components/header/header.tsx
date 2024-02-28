@@ -11,7 +11,7 @@ interface HeaderProps {
 
 export default function Header({ currentSection, sectionList }: HeaderProps) {
     const [displayBurger, setDisplayBurger] = useState(false);
-    const ref1 = useRef<HTMLDivElement>(null);
+    const linkParent = useRef<HTMLDivElement>(null);
 
     function scrollIntoNav(section: number) {
         sectionList.current?.children[section].scrollIntoView({ behavior: 'smooth' });
@@ -22,8 +22,8 @@ export default function Header({ currentSection, sectionList }: HeaderProps) {
     }
 
     useEffect(() => {
-        if (ref1.current) {
-            var curSec = Array.from(ref1.current.children) as Array<any>;
+        if (linkParent.current) {
+            var curSec = Array.from(linkParent.current.children) as Array<any>;
             curSec.forEach((elem: any) => elem.style.color = 'black');
 
             curSec[currentSection].style.color = 'red';
@@ -44,7 +44,7 @@ export default function Header({ currentSection, sectionList }: HeaderProps) {
                 <span onClick={() => scrollIntoNav(4)}> à propos </span>
                 <span onClick={() => scrollIntoNav(5)}> contact </span>
             </div>
-            <div className='nav-container bigscreen' ref={ref1}>
+            <div className='nav-container bigscreen' ref={linkParent}>
                 <span onClick={() => scrollIntoNav(1)}> présentation </span>
 
                 <span onClick={() => scrollIntoNav(2)}> compétences </span>

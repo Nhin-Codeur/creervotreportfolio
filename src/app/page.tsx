@@ -12,16 +12,14 @@ import { useEffect, useRef, useState } from 'react'
 
 export default function Home() {
 
-  const ref1 = useRef<HTMLDivElement>(null);
+  const sectionParent = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState(0);
   const [currentSection, setCurrentSection] = useState(0);
 
   useEffect(() => {
-    if (ref1.current) {
+    if (sectionParent.current) {
       var index = 1;
       var found = false
-
-      console.log(ref1.current.children)
 
       // check if scroll at bottom
       if (Math.round(document.documentElement.clientHeight + document.documentElement.scrollTop) == document.documentElement.scrollHeight) {
@@ -30,12 +28,11 @@ export default function Home() {
       }
 
       while (
-        // ref1.current.children[];
-        index < ref1.current.children.length - 2
+        // sectionParent.current.children[];
+        index < sectionParent.current.children.length - 2
         && !found
       ) {
-        // console.log(rect.getBoundingClientRect());
-        var posDim = ref1.current.children[index].getBoundingClientRect();
+        var posDim = sectionParent.current.children[index].getBoundingClientRect();
         var limit = Math.max(document.body.scrollHeight,
           document.body.offsetHeight,
           document.documentElement.clientHeight,
@@ -43,7 +40,6 @@ export default function Home() {
           document.documentElement.offsetHeight);
 
         if (offset + 50 / 2 < posDim.height + posDim.top + window.scrollY) {
-          console.log(ref1.current.children[index].innerHTML)
           found = true;
 
         } else {
@@ -67,8 +63,8 @@ export default function Home() {
 
   return (
     <>
-      <div ref={ref1}>
-        <Header currentSection={currentSection} sectionList={ref1}></Header>
+      <div ref={sectionParent}>
+        <Header currentSection={currentSection} sectionList={sectionParent}></Header>
         <Presentation ></Presentation>
         <MesCompetences></MesCompetences>
         <Portfolio></Portfolio>
